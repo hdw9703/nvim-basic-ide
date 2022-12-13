@@ -7,7 +7,7 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
-  "perlnavigator",
+	"perlnavigator",
 }
 
 local settings = {

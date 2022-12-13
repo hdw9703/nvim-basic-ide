@@ -17,8 +17,10 @@ null_ls.setup {
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
     formatting.black.with { extra_args = { "--fast" } },
+    formatting.clang_format,
     formatting.stylua,
     formatting.google_java_format,
     diagnostics.flake8,
+    formatting.perltidy,
   },
 }

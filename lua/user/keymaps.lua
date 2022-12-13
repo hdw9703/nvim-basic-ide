@@ -92,5 +92,8 @@ keymap("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false }
 keymap("n", "<leader>r", ":%SnipRun<cr>", opts)
 keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
+-- undotree
+keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
+
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)

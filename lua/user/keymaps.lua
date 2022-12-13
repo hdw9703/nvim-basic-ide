@@ -79,5 +79,18 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
+-- code runner
+keymap("n", "<leader>rr", ":RunCode<CR>", { noremap = true, silent = false })
+keymap("n", "<leader>rf", ":w<CR>:RunFile<CR>", { noremap = true, silent = false })
+keymap("n", "<leader>rft", ":RunFile tab<CR>", { noremap = true, silent = false })
+keymap("n", "<leader>rp", ":RunProject<CR>", { noremap = true, silent = false })
+keymap("n", "<leader>rc", ":RunClose<CR>", { noremap = true, silent = false })
+keymap("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
+keymap("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false })
+
+-- sniprun
+keymap("n", "<leader>r", ":%SnipRun<cr>", opts)
+keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
+
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)

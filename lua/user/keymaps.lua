@@ -66,7 +66,9 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
+keymap("n", "<leader>;", "<cmd>lua require('Comment.api').toggle.blockwise.current()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
+keymap("x", "<leader>;", '<ESC><CMD>lua require("Comment.api").toggle.blockwise(vim.fn.visualmode())<CR>')
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
@@ -90,6 +92,7 @@ keymap("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false }
 
 -- sniprun
 keymap("n", "<leader>r", ":%SnipRun<cr>", opts)
+keymap("n", "<leader>rcc", ":SnipClose<cr>", opts)
 keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
 -- undotree

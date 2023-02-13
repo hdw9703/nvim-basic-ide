@@ -1,26 +1,16 @@
-require "user.impatient"
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.autocommands"
-require "user.colorscheme"
-require "user.cmp"
-require "user.telescope"
-require "user.gitsigns"
-require "user.treesitter"
-require "user.autopairs"
-require "user.comment"
-require "user.nvim-tree"
-require "user.bufferline"
-require "user.lualine"
-require "user.toggleterm"
-require "user.project"
-require "user.illuminate"
-require "user.indentline"
-require "user.alpha"
-require "user.lsp"
-require "user.dap"
-require "user.runner"
-require "user.leap"
-require "user.sniprun"
-require "user.undotree"
+local function load_modules(path)
+  local modules = {}
+  for file in io.popen("ls -1 " .. path):lines() do
+    if string.match(file, "%.lua$") then
+      table.insert(modules, string.sub(file, 1, -5))
+    end
+  end
+  for i, module in ipairs(modules) do
+    local status, err = pcall(require, "user." .. module)
+    if not status then
+      print("Error loading module " .. module .. ": " .. err)
+    end
+  end
+end
+
+load_modules("~/.config/nvim/lua/user")

@@ -14,3 +14,4 @@ local function load_modules(path)
 end
 
 load_modules("~/.config/nvim/lua/user")
+require("user.lsp")

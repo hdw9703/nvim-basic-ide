@@ -103,10 +103,11 @@ return packer.startup(function(use)
 
 	-- hdw9703 configuration
 	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
-	use({ "ggandor/leap.nvim" })
-	use({ "mhartington/formatter.nvim" })
+	use({ "ggandor/leap.nvim", commit = "9a69febb2e5a4f5f5a55dd2d7173098fde917bc5" })
+	-- use({ "mhartington/formatter.nvim" })
 	use({ "hdw9703/sniprun" })
-	use({ "mbbill/undotree" })
+	use({ "mbbill/undotree", commit = "b6fdb95db53b7ceb23ddfe8a8211a3135d98eef0" })
+  use({ "ethanholz/nvim-lastplace", commit = "65c5d6e2501a3af9c2cd15c6548e67fa035bf640" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

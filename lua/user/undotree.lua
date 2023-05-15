@@ -1,7 +1,5 @@
 -- 设置undotree打开聚焦点在undotree面板
-vim.cmd([[
-  let g:undotree_SetFocusWhenToggle = 1
-]])
+vim.g.undotree_SetFocusWhenToggle = 1
 
 -- 光标定位到上次打开文件的位置
 -- vim.cmd([[

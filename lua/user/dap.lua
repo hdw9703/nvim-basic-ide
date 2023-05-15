@@ -3,6 +3,24 @@ if not dap_status_ok then
 	return
 end
 
+dap.adapters.perlsp = {
+	type = "server",
+	host = "127.0.0.1",
+	port = "27011",
+}
+
+dap.configurations.perl = {
+	{
+		name = "Launch Perl",
+		type = "perlsp",
+		request = "launch",
+		program = "${workspaceFolder}/${relativeFile}",
+		reloadModules = true,
+		stopOnEntry = false,
+		cwd = "${workspaceFolder}",
+	},
+}
+
 local dap_ui_status_ok, dapui = pcall(require, "dapui")
 if not dap_ui_status_ok then
 	return

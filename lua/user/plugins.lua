@@ -108,7 +108,6 @@ return packer.startup(function(use)
 	use({ "hdw9703/sniprun" })
 	use({ "mbbill/undotree", commit = "b6fdb95db53b7ceb23ddfe8a8211a3135d98eef0" })
   use({ "ethanholz/nvim-lastplace", commit = "65c5d6e2501a3af9c2cd15c6548e67fa035bf640" })
-  use({ "Exafunction/codeium.vim" })
   use({ "rcarriga/nvim-notify" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
